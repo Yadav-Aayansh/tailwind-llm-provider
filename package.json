@@ -1,0 +1,46 @@
+{
+  "name": "tailwind-llm-provider",
+  "version": "1.0.0",
+  "description": "Let users pick their OpenAI-compatible API provider (e.g. OpenRouter, Gemini, Ollama, Aipipe) via a Tailwind modal",
+  "type": "module",
+  "main": "dist/index.min.js",
+  "module": "dist/index.min.js",
+  "browser": "dist/index.min.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.min.js",
+      "default": "./dist/index.min.js"
+    }
+  },
+  "unpkg": "dist/index.global.min.js",
+  "jsdelivr": "dist/index.global.min.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build:esm": "esbuild src/index.js --bundle --minify --format=esm --outfile=dist/index.min.js",
+    "build:global": "esbuild src/index.js --bundle --minify --format=iife --global-name=LLMProvider --outfile=dist/index.global.min.js",
+    "build": "npm run build:esm && npm run build:global",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "tailwind",
+    "llm",
+    "provider",
+    "openai",
+    "modal",
+    "ui"
+  ],
+  "author": "Aayansh Yadav",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
