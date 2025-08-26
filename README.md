@@ -86,7 +86,7 @@ const config = await openaiConfig({
     { name: "OpenAI", url: "https://api.openai.com/v1" },
     { name: "OpenRouter", url: "https://openrouter.ai/api/v1" },
     { name: "Local Ollama", url: "http://localhost:11434/v1" },
-    { name: "Aipipe", url: "https://api.aipipe.ai/v1" }
+    { name: "Aipipe", url: "https://aipipe.org/openrouter/v1" }
   ]
 });
 ```
@@ -146,11 +146,10 @@ This library works with any OpenAI-compatible API, including:
 - **OpenAI** - `https://api.openai.com/v1`
 - **OpenRouter** - `https://openrouter.ai/api/v1`
 - **Ollama** - `http://localhost:11434/v1`
-- **Aipipe** - `https://api.aipipe.ai/v1`
+- **Aipipe** - `https://aipipe.org/openrouter/v1`
 - **Together AI** - `https://api.together.xyz/v1`
 - **Groq** - `https://api.groq.com/openai/v1`
-- **Anthropic** (via proxy)
-- **Google Gemini** (via proxy)
+- **Google Gemini** - `https://generativelanguage.googleapis.com/v1beta/openai`
 - Any other OpenAI-compatible endpoint
 
 ## Styling
@@ -204,13 +203,6 @@ interface Options {
 declare function openaiConfig(options?: Options): Promise<Config>;
 ```
 
-## Browser Support
-
-- Chrome/Edge 88+
-- Firefox 87+
-- Safari 14+
-- Any browser with ES2020 support
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -218,8 +210,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 MIT © [Aayansh Yadav](https://github.com/aayanshyadav)
-
-## Links
-
-- [npm package](https://www.npmjs.com/package/tailwind-llm-provider)
-- [GitHub repository](https://github.com/aayanshyadav/tailwind-llm-provider)
